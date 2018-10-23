@@ -1,5 +1,5 @@
 # spec/deck_spec.rb
-
+require 'pry'
 require_relative "../solution.rb"
 
 describe "Deck" do
@@ -10,7 +10,9 @@ describe "Deck" do
   end
 
   it "initializes with 52 cards" do
+    # binding.pry
     expect(test_deck.cards.length).to eq(52)
+
   end
 
   it "#choose_card removes a card from the deck" do
@@ -25,7 +27,7 @@ end
 
 describe "Card" do
 
-    let(:queen_of_hearts) { Card.new("Hearts", "Q") }
+    let(:queen_of_hearts) { Card.new( "Q", "Hearts", Deck.new) }
 
     it "Queen of Hearts has a rank of Q" do
         expect(queen_of_hearts.rank).to eq("Q")
