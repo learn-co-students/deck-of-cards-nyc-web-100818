@@ -1,5 +1,6 @@
 # spec/deck_spec.rb
 
+require 'pry'
 require_relative "../solution.rb"
 
 describe "Deck" do
@@ -26,6 +27,8 @@ end
 describe "Card" do
 
     let(:queen_of_hearts) { Card.new("Hearts", "Q") }
+
+
 
     it "Queen of Hearts has a rank of Q" do
         expect(queen_of_hearts.rank).to eq("Q")
