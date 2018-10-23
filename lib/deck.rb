@@ -1,3 +1,6 @@
+require_relative 'card'
+require 'pry'
+
 class Deck
 
   attr_accessor :deck
@@ -32,13 +35,8 @@ class Deck
 
 end
 
-
-class Card
-
-  attr_accessor :suit, :rank
-
-  def initialize(suit, rank)
-    @suit, @rank = suit, rank
-  end
-
-end
+game = Deck.new
+print game.choose_card
+puts ''
+print game.reveal_deck.count
+puts ''
